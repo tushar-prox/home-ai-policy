@@ -8,22 +8,81 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="styles.css">
+<script src="nav.js" defer></script>
+<script src="language.js" defer></script>
 </head>
-<body>
+<body class="has-doc-nav">
+
+<a href="#main" class="skip-to-main">Skip to main content</a>
+
+<nav class="doc-nav" id="doc-nav" aria-label="Table of contents">
+  <div class="doc-nav__inner">
+    <div class="doc-nav__head">
+      <a class="doc-nav__title" href="#cover">Family AI Policy</a>
+      <button type="button" class="doc-nav__collapse" id="doc-nav-collapse" aria-expanded="true" aria-controls="doc-nav-links" title="Collapse sidebar">
+        <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+        <span class="visually-hidden">Collapse navigation</span>
+      </button>
+    </div>
+    <ul class="doc-nav__list" id="doc-nav-links">
+      <li><a href="#cover" class="doc-nav__link doc-nav__link--cover">Cover</a></li>
+      <li><a href="#language-section" class="doc-nav__link doc-nav__link--cover">Indian languages</a></li>
+      <li><a href="#section-01" class="doc-nav__link">01 · Member categories &amp; access</a></li>
+      <li>
+        <a href="#section-02" class="doc-nav__link">02 · Approved AI tools</a>
+        <ul class="doc-nav__sub">
+          <li><a href="#section-02-free" class="doc-nav__link doc-nav__sublink">Free &amp; low-cost stack</a></li>
+        </ul>
+      </li>
+      <li><a href="#section-03" class="doc-nav__link">03 · Household AI rules</a></li>
+      <li><a href="#section-04" class="doc-nav__link">04 · Parental permission</a></li>
+      <li><a href="#section-05" class="doc-nav__link">05 · Data retention &amp; privacy</a></li>
+      <li><a href="#section-06" class="doc-nav__link">06 · Approval process</a></li>
+      <li><a href="#section-07" class="doc-nav__link">07 · Incident reporting</a></li>
+      <li><a href="#section-08" class="doc-nav__link">08 · Sample scenarios</a></li>
+      <li>
+        <a href="#section-09" class="doc-nav__link">09 · Mobile &amp; gaming devices</a>
+        <ul class="doc-nav__sub">
+          <li><a href="#section-09-devices" class="doc-nav__link doc-nav__sublink">Device ownership</a></li>
+          <li><a href="#section-09-screen-time" class="doc-nav__link doc-nav__sublink">Screen time limits</a></li>
+          <li><a href="#section-09-mobile" class="doc-nav__link doc-nav__sublink">Mobile phone rules</a></li>
+          <li><a href="#section-09-gaming" class="doc-nav__link doc-nav__sublink">Gaming device rules</a></li>
+          <li><a href="#section-09-device-scenarios" class="doc-nav__link doc-nav__sublink">Device &amp; gaming scenarios</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#section-09b" class="doc-nav__link">09-B · Grandparents &amp; seniors</a>
+        <ul class="doc-nav__sub">
+          <li><a href="#section-09b-can-use" class="doc-nav__link doc-nav__sublink">What grandparents can use</a></li>
+          <li><a href="#section-09b-rules" class="doc-nav__link doc-nav__sublink">Rules for grandparent AI</a></li>
+          <li><a href="#section-09b-family" class="doc-nav__link doc-nav__sublink">Family responsibility</a></li>
+          <li><a href="#section-09b-scenarios" class="doc-nav__link doc-nav__sublink">Grandparent scenarios</a></li>
+        </ul>
+      </li>
+      <li><a href="#section-10" class="doc-nav__link">10 · Policy review &amp; updates</a></li>
+      <li><a href="#policy-footer" class="doc-nav__link doc-nav__link--cover">Footer</a></li>
+    </ul>
+  </div>
+</nav>
+
+<button type="button" class="doc-nav__reopen" id="doc-nav-reopen" hidden aria-controls="doc-nav" title="Open table of contents">
+  <i class="fa-solid fa-list-ul" aria-hidden="true"></i>
+  <span class="visually-hidden">Open navigation</span>
+</button>
 
 <!-- COVER -->
-<header class="cover" role="banner">
+<header class="cover" id="cover" role="banner">
   <div class="cover-top">
     <div class="family-badge">
       <div class="badge-icon"><i class="fa-solid fa-house"></i></div>
       <div class="badge-text">Indian Household · All Age Groups</div>
     </div>
-    <div class="version-tag">Version 1.0 · 2026</div>
+    <div class="version-tag">Version 1.3 · 2026</div>
   </div>
   <div class="cover-title">
     <div class="eyebrow">Official Household Document</div>
     <h1>Family <span>AI Usage</span><br>Policy</h1>
-    <div class="subtitle">Age-appropriate rules, permissions, and guidelines for responsible AI use — applicable to any Indian household with children across all age groups.</div>
+    <div class="subtitle">Age-appropriate rules, permissions, and guidelines for responsible AI use — for nuclear, joint, and single-guardian homes across India. Where this policy says &ldquo;parents,&rdquo; it means any parent or legal guardian responsible for the child.</div>
   </div>
   <div class="cover-meta">
     <div class="meta-item"><div class="label">Member Tiers</div><div class="value">5 Groups</div></div>
@@ -34,10 +93,31 @@
   </div>
 </header>
 
-<main class="container" id="main">
+<div class="lang-bar" id="language-section" aria-labelledby="lang-bar-title">
+  <div class="lang-bar__inner">
+    <div class="lang-bar__intro">
+      <h2 class="lang-bar__title" id="lang-bar-title"><i class="fa-solid fa-language" aria-hidden="true"></i> Read this policy in other Indian languages</h2>
+      <p class="lang-bar__text">The official text of this document is <strong>English</strong>. Use the buttons below to open a <strong>machine-translated</strong> copy of this same page in your language (via Google Translate in a new tab). Names of laws, products, and safety steps may be imperfect — confirm anything critical with a parent or guardian.</p>
+      <p class="lang-bar__text lang-bar__text--secondary">For Indian-government language and AI tools, see <a href="https://bhashini.gov.in/" target="_blank" rel="noopener noreferrer">Bhashini</a> (separate service).</p>
+      <p class="lang-bar__hosting" id="lang-hosting-note" hidden><strong>Local file:</strong> Translation links work only when this page is opened from a website (<code>https://…</code>), not from a double-clicked file on your computer. Host the site (e.g. GitHub Pages) and open that URL.</p>
+    </div>
+    <div class="lang-bar__controls">
+      <div class="lang-bar__chips-wrap">
+        <span class="lang-bar__label" id="lang-chips-label">Choose language</span>
+        <div class="lang-bar__chips" id="lang-chips" aria-labelledby="lang-chips-label"></div>
+      </div>
+      <div class="lang-bar__select-wrap">
+        <label class="lang-bar__label" for="lang-select">Or pick from list</label>
+        <select id="lang-select" class="lang-bar__select" aria-describedby="lang-bar-title"></select>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main class="container" id="main" tabindex="-1">
 
   <!-- S1: CATEGORIES -->
-  <div class="section">
+  <div class="section" id="section-01">
     <div class="section-header">
       <span class="section-num">Section 01</span>
       <h2 class="section-title">Member Categories & Access Tiers</h2>
@@ -56,7 +136,7 @@
       <div class="member-card adult">
         <div class="member-role"><i class="fa-solid fa-user-shield fa-icon-sm"></i> Policy Admin — Full Access</div>
         <div class="member-name">Parent / Guardian (18+)</div>
-        <div class="member-desc">Any adult in the household. Sets the rules, approves access, reviews children's activity, and manages all AI accounts and subscriptions.</div>
+        <div class="member-desc">Any adult with parental responsibility — mother, father, or legal guardian (including in single-parent households). Sets the rules, approves access, reviews children's activity, and manages all AI accounts and subscriptions. In joint families, grandparents or other elders may supervise use as agreed with the primary guardians, but account and policy decisions stay with the parent(s) or guardian.</div>
         <div class="member-perms">
           <span class="perm-tag green">✓ All Tools</span>
           <span class="perm-tag green">✓ Grant Access</span>
@@ -119,7 +199,7 @@
   </div>
 
   <!-- S2: TOOLS -->
-  <div class="section">
+  <div class="section" id="section-02">
     <div class="section-header">
       <span class="section-num">Section 02</span>
       <h2 class="section-title">Approved AI Tools by Age Group</h2>
@@ -153,7 +233,7 @@
       </div>
       <div class="tool-row">
         <div class="tool-emoji">🧒</div>
-        <div><div class="tool-name">Kids-Safe AI Tutors</div><div class="tool-sub">Khanmigo, Socratic, Byju's AI</div></div>
+        <div><div class="tool-name">Kids-Safe AI Tutors</div><div class="tool-sub">Khanmigo, Socratic, BYJU'S, Vedantu / Unacademy AI (school-aligned)</div></div>
         <div><div class="access-dot full">✓</div></div>
         <div><div class="access-dot full">✓</div></div>
         <div><div class="access-dot full">✓</div></div>
@@ -203,6 +283,26 @@
     <div class="tool-legend">
       ✓ Full Access &nbsp;|&nbsp; S = Supervised (common area, parent aware) &nbsp;|&nbsp; A = Approval Required &nbsp;|&nbsp; P = Parent Present &nbsp;|&nbsp; ✗ = Not Permitted
     </div>
+
+    <h3 class="subsection-title subsection-title--spaced" id="section-02-free"><i class="fa-solid fa-tags subsection-title__icon icon-teal" aria-hidden="true"></i> Free &amp; Low-Cost Stack (Android, iPhone &amp; Generic)</h3>
+    <p class="section-intro section-intro--compact">Defaults that work across phones, tablets, and browsers without many paid subscriptions. Same household rules (Section 03) apply — free tools are not less risky for Aadhaar, bank details, or OTPs.</p>
+    <table class="retention-table retention-table--mb">
+      <thead><tr><th>Category</th><th>Free or low-cost options</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>AI chat &amp; search</td><td>ChatGPT, Gemini, Microsoft Copilot, Perplexity (free tiers)</td><td>Pick <strong>one</strong> family default; limits vary by tier. Teens stay supervised per this policy.</td></tr>
+        <tr><td>Study help</td><td>Khan Academy (core), Google Socratic</td><td>Khanmigo or similar may be paid in some regions — core Khan content stays free.</td></tr>
+        <tr><td>Passwords</td><td>Bitwarden (free personal), KeePass + your own sync</td><td>Never store passwords in WhatsApp or notes. Family paid plans are low-cost if you upgrade later.</td></tr>
+        <tr><td>Parental controls</td><td>Google Family Link (Android); Screen Time + Family Sharing (iPhone)</td><td>Built-in; use before paying for third-party parental apps.</td></tr>
+        <tr><td>Family AI log &amp; policy</td><td>Google Sheets, Google Docs, Notion (free tier)</td><td>One shared &ldquo;Family AI Log&rdquo; is enough to start.</td></tr>
+        <tr><td>Translation &amp; Indian languages</td><td>Google Translate, Bhashini</td><td>Free; still verify important facts.</td></tr>
+        <tr><td>Home Wi-Fi safety (optional)</td><td>NextDNS (free tier), router blocklists</td><td>Helps all devices on the network; free tier has usage caps.</td></tr>
+      </tbody>
+    </table>
+    <div class="callout info callout--mt-16">
+      <div class="callout-icon"><i class="fa-solid fa-piggy-bank icon-info"></i></div>
+      <div class="callout-text"><strong>Low-cost upgrade path</strong>Instead of many subscriptions, consider <strong>one</strong> paid AI plan (e.g. ChatGPT Plus or Google AI Pro) on a <strong>parent account only</strong>, with children using it in the common area under your rules — often cheaper than separate teen accounts.</div>
+    </div>
+
     <div class="grandparent-access-note">
       <span class="grandparent-access-note__emoji" aria-hidden="true">👴</span>
       <div><strong class="grandparent-access-note__title">Grandparent / Senior Access</strong>Grandparents may use voice AI assistants (Google Assistant, Alexa), video calling AI, and devotional or entertainment apps with family help. They must not use AI financial tools, click unknown AI chatbot links, or share personal documents with AI tools. A parent or teenager must set up and periodically review their device settings.</div>
@@ -210,7 +310,7 @@
   </div>
 
   <!-- S3: RULES -->
-  <div class="section">
+  <div class="section" id="section-03">
     <div class="section-header">
       <span class="section-num">Section 03</span>
       <h2 class="section-title">Household AI Rules</h2>
@@ -242,7 +342,14 @@
         <span class="rule-badge"><i class="fa-solid fa-circle-exclamation"></i> Important</span>
         <div class="rule-content">
           <div class="rule-title">Academic Honesty — AI Cannot Write School Assignments</div>
-          <div class="rule-desc">AI may be used to understand concepts, get explanations, or brainstorm ideas. All children and teenagers must write assignments, essays, and projects in their own words. Submitting AI-generated text as their own is strictly not allowed.</div>
+          <div class="rule-desc">AI may be used to understand concepts, get explanations, or brainstorm ideas. All children and teenagers must write assignments, essays, and projects in their own words. Submitting AI-generated text as their own is strictly not allowed. For board exams (Classes 10 &amp; 12), CBSE / ICSE / state board, and internal school assessments, follow the school&rsquo;s stated AI and plagiarism rules — they override this document where stricter.</div>
+        </div>
+      </div>
+      <div class="rule-item important">
+        <span class="rule-badge"><i class="fa-solid fa-circle-exclamation"></i> Important</span>
+        <div class="rule-content">
+          <div class="rule-title">Family Values &amp; Culture — AI Is Not the Final Word</div>
+          <div class="rule-desc">AI may give answers that conflict with your family&rsquo;s religion, language preferences, or cultural norms, or that oversimplify Indian history and society. Children and teens should treat AI as one source — not authority — and discuss anything confusing or upsetting with a parent. This is especially important for content about faith, identity, or politics.</div>
         </div>
       </div>
       <div class="rule-item important">
@@ -257,6 +364,13 @@
         <div class="rule-content">
           <div class="rule-title">No Photos of Family Members Uploaded to AI Tools</div>
           <div class="rule-desc">Real photographs of any family member — especially children — must not be uploaded to AI image tools, face-swap apps, or AI editors without the explicit agreement of all adults in the household.</div>
+        </div>
+      </div>
+      <div class="rule-item standard">
+        <span class="rule-badge"><i class="fa-solid fa-circle-dot"></i> Standard</span>
+        <div class="rule-content">
+          <div class="rule-title">Coaching &amp; Tuition — Same Honesty as School</div>
+          <div class="rule-desc">If your child goes to tuition or coaching, the same honesty rules apply: AI must not be used to fool the tutor or skip real practice. Where the coaching centre bans or limits AI, that rule applies at home too. Parents can check with teachers or centre heads if unsure.</div>
         </div>
       </div>
       <div class="rule-item standard">
@@ -284,7 +398,7 @@
   </div>
 
   <!-- S4: PERMISSION -->
-  <div class="section">
+  <div class="section" id="section-04">
     <div class="section-header">
       <span class="section-num">Section 04</span>
       <h2 class="section-title">What Requires Parental Permission</h2>
@@ -297,21 +411,21 @@
     <table class="retention-table retention-table--mt">
       <thead><tr><th>Activity</th><th>Who Must Approve</th><th>Applies To</th></tr></thead>
       <tbody>
-        <tr><td>Creating a new AI account or signing up for any AI platform</td><td>Both parents</td><td>Teenagers, Pre-Teens</td></tr>
-        <tr><td>Paying for an AI subscription or any in-app purchase</td><td>Primary earning parent</td><td>All family members</td></tr>
+        <tr><td>Creating a new AI account or signing up for any AI platform</td><td>All legal guardians agree, or sole guardian</td><td>Teenagers, Pre-Teens</td></tr>
+        <tr><td>Paying for an AI subscription or any in-app purchase</td><td>Guardian who manages household money (or as the family decides)</td><td>All family members</td></tr>
         <tr><td>Using AI to generate images (especially depicting people)</td><td>One parent</td><td>Teenagers</td></tr>
         <tr><td>Sharing AI-generated content on social media</td><td>One parent review first</td><td>Teenagers</td></tr>
         <tr><td>Using AI assistance for school assignments (must declare)</td><td>Inform parent + confirm school policy allows it</td><td>Teenagers, Pre-Teens</td></tr>
         <tr><td>Connecting any AI tool to a third-party app or service</td><td>Tech-savvy parent</td><td>Teenagers</td></tr>
         <tr><td>Using AI to draft messages or emails that will be sent</td><td>One parent reviews the draft</td><td>Teenagers, Pre-Teens</td></tr>
         <tr><td>Deleting AI conversation history or chat logs</td><td>Inform one parent before deleting</td><td>Teenagers</td></tr>
-        <tr><td>Using any AI tool not on the approved list (Section 02)</td><td>Both parents discuss and agree</td><td>All children</td></tr>
+        <tr><td>Using any AI tool not on the approved list (Section 02)</td><td>All guardians discuss and agree (or sole guardian decides)</td><td>All children</td></tr>
       </tbody>
     </table>
   </div>
 
   <!-- S5: DATA RETENTION -->
-  <div class="section">
+  <div class="section" id="section-05">
     <div class="section-header">
       <span class="section-num">Section 05</span>
       <h2 class="section-title">Data Retention & Privacy</h2>
@@ -319,7 +433,7 @@
     </div>
     <div class="callout info">
       <div class="callout-icon"><i class="fa-solid fa-circle-info icon-info"></i></div>
-      <div class="callout-text"><strong>Why This Matters</strong>AI tools store conversation history on external servers by default. Being intentional about what is saved, and how long it stays, protects every family member — especially children.</div>
+      <div class="callout-text"><strong>Why This Matters</strong>AI tools store conversation history on external servers by default. Being intentional about what is saved, and how long it stays, protects every family member — especially children. India&rsquo;s Digital Personal Data Protection Act, 2023 treats parents as the consent managers for children&rsquo;s data on many services; this household policy supports that by keeping children&rsquo;s accounts minimal and parent-controlled.</div>
     </div>
     <table class="retention-table retention-table--mt">
       <thead><tr><th>Data Type</th><th>Retention Period</th><th>Action Required</th><th>Responsible</th></tr></thead>
@@ -340,7 +454,7 @@
   </div>
 
   <!-- S6: APPROVAL PROCESS -->
-  <div class="section">
+  <div class="section" id="section-06">
     <div class="section-header">
       <span class="section-num">Section 06</span>
       <h2 class="section-title">Approval Process</h2>
@@ -364,7 +478,7 @@
   </div>
 
   <!-- S7: INCIDENT REPORTING -->
-  <div class="section">
+  <div class="section" id="section-07">
     <div class="section-header">
       <span class="section-num">Section 07</span>
       <h2 class="section-title">Incident Reporting Process</h2>
@@ -417,7 +531,7 @@
         <div class="inc-examples">AI showed disturbing or adult content to a child; AI impersonated a real person; suspected AI-enabled phishing or scam.</div>
         <ul class="inc-steps">
           <li><div class="inc-step-num">1</div><span>Stop using the tool immediately</span></li>
-          <li><div class="inc-step-num">2</div><span>Tell both parents right away</span></li>
+          <li><div class="inc-step-num">2</div><span>Tell a parent or guardian right away — if both parents live in the home, inform both as soon as practical</span></li>
           <li><div class="inc-step-num">3</div><span>Screenshot and preserve all evidence</span></li>
           <li><div class="inc-step-num">4</div><span>Report to the AI tool's safety / abuse team</span></li>
           <li><div class="inc-step-num">5</div><span>File complaint at cybercrime.gov.in if fraud occurred</span></li>
@@ -428,7 +542,7 @@
   </div>
 
   <!-- S8: SCENARIOS -->
-  <div class="section">
+  <div class="section" id="section-08">
     <div class="section-header">
       <span class="section-num">Section 08</span>
       <h2 class="section-title">Sample Scenarios</h2>
@@ -522,7 +636,7 @@
   </div>
 
   <!-- S9: MOBILE & GAMING DEVICE RULES -->
-  <div class="section">
+  <div class="section" id="section-09">
     <div class="section-header">
       <span class="section-num">Section 09</span>
       <h2 class="section-title">Mobile & Gaming Device Rules</h2>
@@ -535,7 +649,7 @@
     </div>
 
     <!-- DEVICE OWNERSHIP TABLE -->
-    <h3 class="subsection-title"><i class="fa-solid fa-table-list subsection-title__icon icon-navy" aria-hidden="true"></i> Device Ownership &amp; Access by Age Group</h3>
+    <h3 class="subsection-title" id="section-09-devices"><i class="fa-solid fa-table-list subsection-title__icon icon-navy" aria-hidden="true"></i> Device Ownership &amp; Access by Age Group</h3>
     <table class="retention-table">
       <thead><tr><th>Device Type</th><th>Parent (18+)</th><th>Teenager (13–17)</th><th>Pre-Teen (6–12)</th><th>Toddler (&lt;5)</th></tr></thead>
       <tbody>
@@ -550,7 +664,7 @@
     </table>
 
     <!-- TIME LIMITS -->
-    <h3 class="subsection-title subsection-title--spaced"><i class="fa-solid fa-clock subsection-title__icon icon-saffron" aria-hidden="true"></i> Daily Screen Time Limits (All Devices Combined)</h3>
+    <h3 class="subsection-title subsection-title--spaced" id="section-09-screen-time"><i class="fa-solid fa-clock subsection-title__icon icon-saffron" aria-hidden="true"></i> Daily Screen Time Limits (All Devices Combined)</h3>
     <div class="screen-time-grid">
       <div class="screen-time-card screen-time-card--teal">
         <div class="screen-time-card__emoji" aria-hidden="true">👨‍👩</div>
@@ -579,7 +693,7 @@
     </div>
 
     <!-- MOBILE RULES -->
-    <h3 class="subsection-title subsection-title--spaced subsection-title--tight"><i class="fa-solid fa-mobile-screen-button subsection-title__icon icon-saffron" aria-hidden="true"></i> Mobile Phone Rules</h3>
+    <h3 class="subsection-title subsection-title--spaced subsection-title--tight" id="section-09-mobile"><i class="fa-solid fa-mobile-screen-button subsection-title__icon icon-saffron" aria-hidden="true"></i> Mobile Phone Rules</h3>
     <div class="rules-list">
       <div class="rule-item critical">
         <span class="rule-badge"><i class="fa-solid fa-circle-xmark"></i> Critical</span>
@@ -633,7 +747,7 @@
     </div>
 
     <!-- GAMING RULES -->
-    <h3 class="subsection-title subsection-title--spaced subsection-title--tight"><i class="fa-solid fa-gamepad subsection-title__icon icon-teal" aria-hidden="true"></i> Gaming Device Rules</h3>
+    <h3 class="subsection-title subsection-title--spaced subsection-title--tight" id="section-09-gaming"><i class="fa-solid fa-gamepad subsection-title__icon icon-teal" aria-hidden="true"></i> Gaming Device Rules</h3>
     <div class="rules-list">
       <div class="rule-item critical">
         <span class="rule-badge"><i class="fa-solid fa-circle-xmark"></i> Critical</span>
@@ -646,7 +760,7 @@
         <span class="rule-badge"><i class="fa-solid fa-circle-xmark"></i> Critical</span>
         <div class="rule-content">
           <div class="rule-title">Age Ratings Must Be Followed — No Exceptions</div>
-          <div class="rule-desc">No child or teenager should play games rated above their age (PEGI / ESRB ratings). Pre-teens: PEGI 7 and PEGI 12 only. Teenagers: up to PEGI 16. PEGI 18 games are for adults only. Parents must verify ratings before purchasing or downloading any game.</div>
+          <div class="rule-desc">No child or teenager should play games rated above their age. Use PEGI / ESRB labels on international titles and age labels on Indian app stores (Google Play, Apple App Store) and any Central Board of Film Certification (CBFC) or publisher guidance where shown. Pre-teens: typically PEGI 7 and PEGI 12 only. Teenagers: up to PEGI 16. Adult-only games are for 18+ only. Parents must verify ratings before purchasing or downloading any game.</div>
         </div>
       </div>
       <div class="rule-item important">
@@ -701,7 +815,7 @@
     </div>
 
     <!-- SCENARIO EXAMPLES FOR DEVICES -->
-    <h3 class="subsection-title subsection-title--spaced subsection-title--tight"><i class="fa-solid fa-masks-theater subsection-title__icon icon-gold" aria-hidden="true"></i> Device &amp; Gaming Scenarios</h3>
+    <h3 class="subsection-title subsection-title--spaced subsection-title--tight" id="section-09-device-scenarios"><i class="fa-solid fa-masks-theater subsection-title__icon icon-gold" aria-hidden="true"></i> Device &amp; Gaming Scenarios</h3>
 
     <div class="scenario-card">
       <div class="scenario-header amber">
@@ -755,7 +869,7 @@
 
 
   <!-- S-GP: GRANDPARENT RULES -->
-  <div class="section">
+  <div class="section" id="section-09b">
     <div class="section-header">
       <span class="section-num section-num--grandparent">Section 09-B</span>
       <h2 class="section-title">Grandparent &amp; Senior Member Rules</h2>
@@ -768,7 +882,7 @@
     </div>
 
     <!-- WHAT GRANDPARENTS CAN USE -->
-    <h3 class="subsection-title"><i class="fa-solid fa-circle-check subsection-title__icon icon-green-dark" aria-hidden="true"></i> What Grandparents Can Use (With Family Setup)</h3>
+    <h3 class="subsection-title" id="section-09b-can-use"><i class="fa-solid fa-circle-check subsection-title__icon icon-green-dark" aria-hidden="true"></i> What Grandparents Can Use (With Family Setup)</h3>
     <table class="retention-table retention-table--mb">
       <thead><tr><th>Tool / Use Case</th><th>Examples</th><th>Condition</th></tr></thead>
       <tbody>
@@ -783,7 +897,7 @@
     </table>
 
     <!-- GRANDPARENT RULES LIST -->
-    <h3 class="subsection-title subsection-title--tight"><i class="fa-solid fa-clipboard-list subsection-title__icon icon-navy" aria-hidden="true"></i> Rules for Grandparent AI Use</h3>
+    <h3 class="subsection-title subsection-title--tight" id="section-09b-rules"><i class="fa-solid fa-clipboard-list subsection-title__icon icon-navy" aria-hidden="true"></i> Rules for Grandparent AI Use</h3>
     <div class="rules-list">
 
       <div class="rule-item critical">
@@ -869,7 +983,7 @@
     </div>
 
     <!-- GRANDPARENT RESPONSIBILITY TABLE -->
-    <h3 class="subsection-title subsection-title--grand subsection-title--tight"><i class="fa-solid fa-people-arrows subsection-title__icon icon-teal" aria-hidden="true"></i> Family Responsibility Towards Grandparents</h3>
+    <h3 class="subsection-title subsection-title--grand subsection-title--tight" id="section-09b-family"><i class="fa-solid fa-people-arrows subsection-title__icon icon-teal" aria-hidden="true"></i> Family Responsibility Towards Grandparents</h3>
     <table class="retention-table">
       <thead><tr><th>Responsibility</th><th>Who Does It</th><th>How Often</th></tr></thead>
       <tbody>
@@ -884,7 +998,7 @@
     </table>
 
     <!-- GRANDPARENT SCENARIOS -->
-    <h3 class="subsection-title subsection-title--grand subsection-title--tight"><i class="fa-solid fa-masks-theater subsection-title__icon icon-gold" aria-hidden="true"></i> Grandparent Scenarios</h3>
+    <h3 class="subsection-title subsection-title--grand subsection-title--tight" id="section-09b-scenarios"><i class="fa-solid fa-masks-theater subsection-title__icon icon-gold" aria-hidden="true"></i> Grandparent Scenarios</h3>
 
     <div class="scenario-card">
       <div class="scenario-header green">
@@ -937,7 +1051,7 @@
   </div>
 
   <!-- S10: REVIEW -->
-  <div class="section">
+  <div class="section" id="section-10">
     <div class="section-header">
       <span class="section-num">Section 10</span>
       <h2 class="section-title">Policy Review & Updates</h2>
@@ -948,33 +1062,33 @@
       <tbody>
         <tr><td>Monthly Family Check-in</td><td>1st Sunday of every month</td><td>Any parent</td><td>Incident review, tool usage, children's feedback, screen time adherence</td></tr>
         <tr><td>Quarterly Tool Audit</td><td>Every 3 months</td><td>Tech-savvy parent</td><td>Add/remove approved tools, review subscriptions, assess new AI apps</td></tr>
-        <tr><td>Annual Policy Refresh</td><td>Every April (start of academic year)</td><td>Both parents together</td><td>Full policy update; adjust age tier rules as children grow</td></tr>
-        <tr><td>Triggered Review</td><td>After any High or Critical incident</td><td>Both parents</td><td>Specific rules updated based on what went wrong</td></tr>
-        <tr><td>Age Milestone Review</td><td>When child turns 5, 13, or 18</td><td>Both parents + the child</td><td>Access tier promoted; new responsibilities explained to the child directly</td></tr>
+        <tr><td>Annual Policy Refresh</td><td>Every April (start of academic year in India)</td><td>All guardians together (or sole guardian)</td><td>Full policy update; adjust age tier rules as children grow</td></tr>
+        <tr><td>Triggered Review</td><td>After any High or Critical incident</td><td>All relevant guardians</td><td>Specific rules updated based on what went wrong</td></tr>
+        <tr><td>Age Milestone Review</td><td>When child turns 5, 13, or 18</td><td>Guardian(s) + the child</td><td>Access tier promoted; new responsibilities explained to the child directly</td></tr>
       </tbody>
     </table>
     <div class="callout info callout--mt-20">
       <div class="callout-icon"><i class="fa-solid fa-seedling icon-seedling"></i></div>
-      <div class="callout-text"><strong>Access Grows as Children Grow</strong>When a pre-teen turns 13, review and consider moving them to the Teenager tier. When a teenager turns 18, they move to the Parent / Adult tier with full access. Every tier upgrade should include a dedicated conversation — not just automatic permission.</div>
+      <div class="callout-text"><strong>Access Grows as Children Grow</strong>When a pre-teen turns 13, review and consider moving them to the Teenager tier. When a teenager turns 18, they move to the Parent / Adult tier with full access. Every tier upgrade should include a dedicated conversation — not just automatic permission. After Class 10 and Class 12 board exams, revisit AI use for stress, college applications, and prep — rules can be tightened or relaxed by mutual agreement.</div>
     </div>
   </div>
 
 </main>
 
 <!-- FOOTER -->
-<footer class="policy-footer" role="contentinfo">
+<footer class="policy-footer" id="policy-footer" role="contentinfo">
 
   <!-- Left: policy info -->
   <div class="policy-footer__col">
     <div class="policy-footer__brand-title">Family AI Usage Policy</div>
     <div class="policy-footer__brand-meta">
-      Version 1.0 &nbsp;·&nbsp; 2026<br>
+      Version 1.3 &nbsp;·&nbsp; 2026<br>
       Applicable to all household members<br>
       Review annually or after any major incident
     </div>
     <div class="policy-footer__tags">
       <span class="policy-footer__pill">5 Member Tiers</span>
-      <span class="policy-footer__pill">10 Sections</span>
+      <span class="policy-footer__pill">11 Sections</span>
       <span class="policy-footer__pill">No-Blame Reporting</span>
     </div>
   </div>

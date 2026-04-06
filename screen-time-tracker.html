@@ -24,26 +24,127 @@
 </header>
 
 <div class="companion-hero companion-hero--tracker" role="region" aria-labelledby="tracker-title">
-  <div class="companion-hero__inner">
-    <p class="companion-hero__eyebrow">Browser-only · no account</p>
-    <h1 id="tracker-title">Screen time log</h1>
-    <p class="companion-hero__lead">Record <strong>approximate minutes per day</strong> for each family member. Data stays in <strong>this browser&rsquo;s localStorage</strong> on this device — it does not sync to the cloud. Export a backup JSON occasionally. Compare totals to your <a href="index.html#section-09-screen-time">policy limits</a> as a family check-in, not a court verdict.</p>
+  <div class="companion-hero__inner companion-hero__inner--tracker">
+    <div class="companion-hero__copy">
+      <p class="companion-hero__eyebrow">Browser-only · no account</p>
+      <h1 id="tracker-title">Screen time log</h1>
+      <p class="companion-hero__lead">Record <strong>approximate minutes per day</strong> for each family member. Data stays in <strong>this browser&rsquo;s localStorage</strong> on this device — it does not sync to the cloud. Export a backup JSON occasionally. Compare totals to your <a href="index.html#section-09-screen-time">policy limits</a> as a family check-in, not a court verdict.</p>
+    </div>
+    <div class="companion-hero__art" aria-hidden="true">
+      <svg class="st-hero-svg st-hero-svg--bars" viewBox="0 0 156 118" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="stHeroGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#5eead4" stop-opacity="0.95"/>
+            <stop offset="100%" stop-color="#0d9488" stop-opacity="0.9"/>
+          </linearGradient>
+          <linearGradient id="stHeroGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#fcd34d" stop-opacity="0.95"/>
+            <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.85"/>
+          </linearGradient>
+          <linearGradient id="stHeroGrad3" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.9"/>
+            <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.75"/>
+          </linearGradient>
+        </defs>
+        <rect x="8" y="70" width="28" height="40" rx="5" fill="url(#stHeroGrad1)"/>
+        <rect x="42" y="46" width="28" height="64" rx="5" fill="url(#stHeroGrad2)"/>
+        <rect x="76" y="30" width="28" height="80" rx="5" fill="url(#stHeroGrad3)"/>
+        <rect x="110" y="54" width="28" height="56" rx="5" fill="url(#stHeroGrad1)" opacity="0.75"/>
+        <path d="M4 110h148" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+      </svg>
+      <svg class="st-hero-svg st-hero-svg--donut" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="stHeroDonut1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#5eead4" stop-opacity="0.95"/>
+            <stop offset="100%" stop-color="#0d9488" stop-opacity="0.9"/>
+          </linearGradient>
+          <linearGradient id="stHeroDonut2" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#fcd34d" stop-opacity="0.95"/>
+            <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.85"/>
+          </linearGradient>
+        </defs>
+        <circle cx="50" cy="50" r="36" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="11"/>
+        <path d="M50 14 A36 36 0 0 1 86 50" fill="none" stroke="url(#stHeroDonut2)" stroke-width="11" stroke-linecap="round"/>
+        <path d="M86 50 A36 36 0 0 1 50 86" fill="none" stroke="url(#stHeroDonut1)" stroke-width="11" stroke-linecap="round"/>
+        <circle cx="50" cy="50" r="4" fill="white" fill-opacity="0.9"/>
+      </svg>
+    </div>
   </div>
 </div>
 
 <main class="container companion-main" id="main" tabindex="-1">
 
-  <div class="st-tracker-panel">
-    <h2 class="st-tracker-h2"><i class="fa-solid fa-users" aria-hidden="true"></i> Family members</h2>
-    <p class="st-tracker-lead">Rename rows to match your home (e.g. &ldquo;Arjun&rdquo;, &ldquo;Teen&rdquo;). At least one person stays listed.</p>
+  <nav class="st-page-nav" aria-label="On this page">
+    <span class="st-page-nav__label">Jump to</span>
+    <ul class="st-page-nav__list">
+      <li><a href="#st-section-groups">Groups</a></li>
+      <li><a href="#st-section-members">Members</a></li>
+      <li><a href="#st-section-timer">Timer</a></li>
+      <li><a href="#st-section-log">Log day</a></li>
+      <li><a href="#st-section-charts">Charts</a></li>
+      <li><a href="#st-section-week">7-day chart</a></li>
+      <li><a href="#st-section-history">History</a></li>
+      <li><a href="#st-section-backup">Backup</a></li>
+    </ul>
+  </nav>
+
+  <section class="st-tracker-panel st-tracker-panel--groups" id="st-section-groups" aria-labelledby="st-heading-groups">
+    <h2 id="st-heading-groups" class="st-tracker-h2"><i class="fa-solid fa-people-group" aria-hidden="true"></i> Member groups (policy tiers)</h2>
+    <p class="st-tracker-lead">These match <strong>Section 01</strong> on the policy. <strong>Quota %</strong> uses <a href="index.html#section-09-screen-time">Section 09</a> limits for children &amp; teens; <strong>Parent</strong> and <strong>Grandparent</strong> use a <strong>12 hour/day</strong> ceiling in this log for comparison.</p>
+    <div class="age-legend">
+      <div class="age-pill grandparent"><i class="fa-solid fa-person-cane"></i> Grandparent / Senior (60+)</div>
+      <div class="age-pill adult"><i class="fa-solid fa-user-shield"></i> Parent / Guardian (18–59)</div>
+      <div class="age-pill teen"><i class="fa-solid fa-graduation-cap"></i> Teenager (13–17 yrs)</div>
+      <div class="age-pill child"><i class="fa-solid fa-book-open"></i> Pre-Teen / Child (6–12 yrs)</div>
+      <div class="age-pill toddler"><i class="fa-solid fa-baby"></i> Young Child / Toddler (Below 5 yrs)</div>
+    </div>
+    <p class="st-tracker-lead st-tracker-lead--tight">Full tier descriptions: <a href="index.html#section-01">Member categories &amp; access tiers</a>.</p>
+  </section>
+
+  <section class="st-tracker-panel" id="st-section-members" aria-labelledby="st-heading-members">
+    <h2 id="st-heading-members" class="st-tracker-h2"><i class="fa-solid fa-users" aria-hidden="true"></i> Family members</h2>
+    <p class="st-tracker-lead">Give each person a <strong>name</strong> and pick their <strong>tier</strong> (used for Quota %). At least one person stays listed.</p>
     <div id="st-people-list" class="st-tracker-people"></div>
     <button type="button" class="st-tracker-btn st-tracker-btn--primary" id="st-add-person">
       <i class="fa-solid fa-user-plus" aria-hidden="true"></i> Add family member
     </button>
-  </div>
+  </section>
 
-  <div class="st-tracker-panel">
-    <h2 class="st-tracker-h2"><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i> Log minutes for a day</h2>
+  <section class="st-tracker-panel st-tracker-panel--session" id="st-section-timer" aria-labelledby="st-heading-timer">
+    <h2 id="st-heading-timer" class="st-tracker-h2"><i class="fa-solid fa-hourglass-start" aria-hidden="true"></i> Live session timer</h2>
+    <p class="st-tracker-lead">Pick who is on a device and how long they plan to use it, then <strong>Start</strong>. You can run <strong>several timers at once</strong> (one per person). Use <strong>Pause</strong> for breaks (elapsed time is added to that person&rsquo;s <strong>today</strong> total when the box below is on). <strong>Resume</strong> continues that session. <strong>Stop</strong> ends it and adds any remaining rounded minutes. Warnings appear on each card before the planned time ends.</p>
+
+    <div class="st-session-controls">
+      <div class="st-session-field">
+        <label class="st-tracker-date-label" for="st-session-person">Who</label>
+        <select id="st-session-person" class="st-tracker-input st-tracker-select" aria-describedby="st-session-help"></select>
+      </div>
+      <div class="st-session-field">
+        <label class="st-tracker-date-label" for="st-session-duration">Planned time (minutes)</label>
+        <input type="number" id="st-session-duration" class="st-tracker-input st-tracker-input--num" min="1" max="480" step="1" value="15" />
+      </div>
+      <div class="st-session-field st-session-field--check">
+        <label class="st-session-check">
+          <input type="checkbox" id="st-session-add-today" checked />
+          <span>Add screen time to this person&rsquo;s <strong>today</strong> total: on each <strong>pause</strong> (full minutes so far), and when you <strong>stop</strong> or time runs out (rounded)</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="st-session-display" id="st-session-display" aria-live="polite">
+      <div id="st-session-list" class="st-session-list"></div>
+    </div>
+
+    <div class="st-session-buttons">
+      <button type="button" class="st-tracker-btn st-tracker-btn--primary" id="st-session-start">
+        <i class="fa-solid fa-play" aria-hidden="true"></i> Start timer
+      </button>
+    </div>
+    <p class="st-tracker-lead st-session-footnote" id="st-session-help">Warnings: <strong>~5 min</strong> left (only if the plan is longer than 5 minutes), <strong>~1 min</strong> left (if the plan is at least 2 minutes), <strong>~30 sec</strong> left (if the plan is at least 45 seconds). This tab must stay open for the timer.</p>
+  </section>
+
+  <section class="st-tracker-panel" id="st-section-log" aria-labelledby="st-heading-log">
+    <h2 id="st-heading-log" class="st-tracker-h2"><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i> Log minutes for a day</h2>
     <p class="st-tracker-lead">Enter <strong>total screen minutes that day</strong> (all apps &amp; games combined), per person. Saving overwrites that date if you log again.</p>
     <div class="st-tracker-log-meta">
       <label class="st-tracker-date-label" for="st-log-date">Date</label>
@@ -54,27 +155,45 @@
       <i class="fa-solid fa-floppy-disk" aria-hidden="true"></i> Save day
     </button>
     <p id="st-status" class="st-tracker-status" role="status" aria-live="polite"></p>
-  </div>
+  </section>
 
-  <div class="st-tracker-panel">
-    <h2 class="st-tracker-h2"><i class="fa-solid fa-chart-simple" aria-hidden="true"></i> Last 7 days (household total)</h2>
-    <p class="st-tracker-lead">Relative bar heights — tallest day = 100% width. Useful for spotting spikes.</p>
-    <div id="st-week-bars" class="st-week-bars"></div>
-  </div>
+  <section class="st-tracker-panel st-tracker-panel--charts" id="st-section-charts" aria-labelledby="st-heading-charts">
+    <h2 id="st-heading-charts" class="st-tracker-h2"><i class="fa-solid fa-chart-pie" aria-hidden="true"></i> Visual summary</h2>
+    <p class="st-tracker-lead">Charts update from your saved log. The <strong>day split</strong> uses the same date as &ldquo;Log minutes for a day&rdquo; above.</p>
+    <div class="st-charts-grid">
+      <div class="st-chart-card">
+        <h3 class="st-chart-card__title"><i class="fa-solid fa-chart-pie" aria-hidden="true"></i> Day split</h3>
+        <p class="st-chart-card__sub">Share of minutes per person</p>
+        <div id="st-donut-chart" class="st-donut-chart"></div>
+        <ul id="st-donut-legend" class="st-donut-legend"></ul>
+      </div>
+      <div class="st-chart-card">
+        <h3 class="st-chart-card__title"><i class="fa-solid fa-chart-line" aria-hidden="true"></i> Household trend</h3>
+        <p class="st-chart-card__sub">Total minutes — last 7 days</p>
+        <div id="st-sparkline" class="st-sparkline" role="img" aria-label="Sparkline of daily household screen minutes"></div>
+      </div>
+    </div>
+  </section>
 
-  <div class="st-tracker-panel">
-    <h2 class="st-tracker-h2"><i class="fa-solid fa-table" aria-hidden="true"></i> History</h2>
-    <p class="st-tracker-lead">Newest dates first.</p>
+  <section class="st-tracker-panel" id="st-section-week" aria-labelledby="st-heading-week">
+    <h2 id="st-heading-week" class="st-tracker-h2"><i class="fa-solid fa-chart-simple" aria-hidden="true"></i> Last 7 days by person</h2>
+    <p class="st-tracker-lead">Each bar shows how the household total splits across family members — useful for seeing who drove the total.</p>
+    <div id="st-week-bars" class="st-week-bars st-week-bars--stacked"></div>
+  </section>
+
+  <section class="st-tracker-panel" id="st-section-history" aria-labelledby="st-heading-history">
+    <h2 id="st-heading-history" class="st-tracker-h2"><i class="fa-solid fa-table" aria-hidden="true"></i> History</h2>
+    <p class="st-tracker-lead">Newest dates first. <strong>Quota %</strong> is logged minutes ÷ that tier&rsquo;s daily guideline (Teen 180 min, Pre-Teen 90, Toddler 30, Parent &amp; Grandparent 720 min / 12 hr).</p>
     <div class="st-tracker-table-wrap">
       <table class="retention-table st-tracker-history" id="st-history-table">
         <thead id="st-history-thead"></thead>
         <tbody id="st-history-body"></tbody>
       </table>
     </div>
-  </div>
+  </section>
 
-  <div class="st-tracker-panel st-tracker-panel--muted">
-    <h2 class="st-tracker-h2"><i class="fa-solid fa-database" aria-hidden="true"></i> Backup &amp; reset</h2>
+  <section class="st-tracker-panel st-tracker-panel--muted" id="st-section-backup" aria-labelledby="st-heading-backup">
+    <h2 id="st-heading-backup" class="st-tracker-h2"><i class="fa-solid fa-database" aria-hidden="true"></i> Backup &amp; reset</h2>
     <p class="st-tracker-lead">Export downloads a JSON file. Keep it somewhere safe if you clear browser data or switch devices.</p>
     <div class="st-tracker-actions">
       <button type="button" class="st-tracker-btn st-tracker-btn--secondary" id="st-export">
@@ -89,7 +208,7 @@
       </button>
     </div>
     <p class="st-tracker-privacy"><i class="fa-solid fa-lock" aria-hidden="true"></i> Nothing is sent to a server. If you use private/incognito mode, data may disappear when you close the tab.</p>
-  </div>
+  </section>
 
   <div class="companion-back-strip">
     <a href="index.html#section-09-timetrack" class="companion-back-strip__link"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to Section 09 — Time track &amp; kid reminders</a>

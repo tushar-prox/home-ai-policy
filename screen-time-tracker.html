@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Screen time log — Family AI &amp; Device Policy</title>
+<meta name="theme-color" content="#1E293B">
+<meta name="description" content="Simple household screen time log stored in your browser (localStorage). Companion to the Family AI &amp; Device Policy.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&amp;family=DM+Sans:wght@300;400;500;600&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+<script src="screen-time-tracker.js" defer></script>
+</head>
+<body class="companion-page">
+
+<a href="#main" class="skip-to-main">Skip to main content</a>
+
+<header class="site-header site-header--companion" role="banner">
+  <a class="site-header__back" href="index.html#section-09-timetrack" title="Back to policy Section 09 — time track" aria-label="Back to policy Section 09">
+    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+  </a>
+  <a class="site-header__brand" href="index.html">Family AI &amp; Device Policy</a>
+  <span class="site-header__meta">Screen time log · local</span>
+</header>
+
+<div class="companion-hero companion-hero--tracker" role="region" aria-labelledby="tracker-title">
+  <div class="companion-hero__inner">
+    <p class="companion-hero__eyebrow">Browser-only · no account</p>
+    <h1 id="tracker-title">Screen time log</h1>
+    <p class="companion-hero__lead">Record <strong>approximate minutes per day</strong> for each family member. Data stays in <strong>this browser&rsquo;s localStorage</strong> on this device — it does not sync to the cloud. Export a backup JSON occasionally. Compare totals to your <a href="index.html#section-09-screen-time">policy limits</a> as a family check-in, not a court verdict.</p>
+  </div>
+</div>
+
+<main class="container companion-main" id="main" tabindex="-1">
+
+  <div class="st-tracker-panel">
+    <h2 class="st-tracker-h2"><i class="fa-solid fa-users" aria-hidden="true"></i> Family members</h2>
+    <p class="st-tracker-lead">Rename rows to match your home (e.g. &ldquo;Arjun&rdquo;, &ldquo;Teen&rdquo;). At least one person stays listed.</p>
+    <div id="st-people-list" class="st-tracker-people"></div>
+    <button type="button" class="st-tracker-btn st-tracker-btn--primary" id="st-add-person">
+      <i class="fa-solid fa-user-plus" aria-hidden="true"></i> Add family member
+    </button>
+  </div>
+
+  <div class="st-tracker-panel">
+    <h2 class="st-tracker-h2"><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i> Log minutes for a day</h2>
+    <p class="st-tracker-lead">Enter <strong>total screen minutes that day</strong> (all apps &amp; games combined), per person. Saving overwrites that date if you log again.</p>
+    <div class="st-tracker-log-meta">
+      <label class="st-tracker-date-label" for="st-log-date">Date</label>
+      <input type="date" id="st-log-date" class="st-tracker-input st-tracker-input--date" />
+    </div>
+    <div id="st-log-fields" class="st-tracker-log-fields"></div>
+    <button type="button" class="st-tracker-btn st-tracker-btn--primary" id="st-save-log">
+      <i class="fa-solid fa-floppy-disk" aria-hidden="true"></i> Save day
+    </button>
+    <p id="st-status" class="st-tracker-status" role="status" aria-live="polite"></p>
+  </div>
+
+  <div class="st-tracker-panel">
+    <h2 class="st-tracker-h2"><i class="fa-solid fa-chart-simple" aria-hidden="true"></i> Last 7 days (household total)</h2>
+    <p class="st-tracker-lead">Relative bar heights — tallest day = 100% width. Useful for spotting spikes.</p>
+    <div id="st-week-bars" class="st-week-bars"></div>
+  </div>
+
+  <div class="st-tracker-panel">
+    <h2 class="st-tracker-h2"><i class="fa-solid fa-table" aria-hidden="true"></i> History</h2>
+    <p class="st-tracker-lead">Newest dates first.</p>
+    <div class="st-tracker-table-wrap">
+      <table class="retention-table st-tracker-history" id="st-history-table">
+        <thead id="st-history-thead"></thead>
+        <tbody id="st-history-body"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="st-tracker-panel st-tracker-panel--muted">
+    <h2 class="st-tracker-h2"><i class="fa-solid fa-database" aria-hidden="true"></i> Backup &amp; reset</h2>
+    <p class="st-tracker-lead">Export downloads a JSON file. Keep it somewhere safe if you clear browser data or switch devices.</p>
+    <div class="st-tracker-actions">
+      <button type="button" class="st-tracker-btn st-tracker-btn--secondary" id="st-export">
+        <i class="fa-solid fa-download" aria-hidden="true"></i> Export JSON
+      </button>
+      <label class="st-tracker-btn st-tracker-btn--secondary st-tracker-btn--file">
+        <i class="fa-solid fa-upload" aria-hidden="true"></i> Import JSON
+        <input type="file" id="st-import" accept="application/json,.json" class="st-tracker-file-input" />
+      </label>
+      <button type="button" class="st-tracker-btn st-tracker-btn--danger" id="st-reset">
+        <i class="fa-solid fa-trash-can" aria-hidden="true"></i> Clear all data
+      </button>
+    </div>
+    <p class="st-tracker-privacy"><i class="fa-solid fa-lock" aria-hidden="true"></i> Nothing is sent to a server. If you use private/incognito mode, data may disappear when you close the tab.</p>
+  </div>
+
+  <div class="companion-back-strip">
+    <a href="index.html#section-09-timetrack" class="companion-back-strip__link"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to Section 09 — Time track &amp; kid reminders</a>
+  </div>
+
+</main>
+
+<footer class="policy-footer policy-footer--companion" role="contentinfo">
+  <div class="policy-footer__main-row">
+    <div class="policy-footer__col">
+      <div class="policy-footer__brand-title">Screen time log</div>
+      <div class="policy-footer__brand-meta">
+        Local storage only · <a href="index.html">Family AI &amp; Device Policy</a> · 2026
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

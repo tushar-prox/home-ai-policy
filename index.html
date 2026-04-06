@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Indian Household AI Policy 2026</title>
+<title>Indian Household AI and Device Policy 2026</title>
 <meta name="theme-color" content="#1E293B">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -15,10 +15,18 @@
 
 <a href="#main" class="skip-to-main">Skip to main content</a>
 
+<header class="site-header" id="site-header" role="banner">
+  <button type="button" class="site-header__toc" id="site-header-toc" aria-controls="doc-nav" aria-expanded="true" aria-label="Toggle table of contents">
+    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+  </button>
+  <a class="site-header__brand" href="#cover">Family AI &amp; Device Policy</a>
+  <span class="site-header__meta">Indian Household · 2026</span>
+</header>
+
 <nav class="doc-nav" id="doc-nav" aria-label="Table of contents">
   <div class="doc-nav__inner">
     <div class="doc-nav__head">
-      <a class="doc-nav__title" href="#cover">Family AI Policy</a>
+      <a class="doc-nav__title" href="#cover">Family AI &amp; Device Policy</a>
       <button type="button" class="doc-nav__collapse" id="doc-nav-collapse" aria-expanded="true" aria-controls="doc-nav-links" title="Collapse sidebar">
         <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
         <span class="visually-hidden">Collapse navigation</span>
@@ -27,6 +35,8 @@
     <ul class="doc-nav__list" id="doc-nav-links">
       <li><a href="#cover" class="doc-nav__link doc-nav__link--cover">Cover</a></li>
       <li><a href="#language-section" class="doc-nav__link doc-nav__link--cover">Indian languages</a></li>
+      <li><a href="scams-and-misinformation.html" class="doc-nav__link doc-nav__link--cover">Scams &amp; misinformation</a></li>
+      <li><a href="screen-time-tracker.html" class="doc-nav__link doc-nav__link--cover">Screen time log</a></li>
       <li><a href="#section-01" class="doc-nav__link">01 · Member categories &amp; access</a></li>
       <li>
         <a href="#section-02" class="doc-nav__link">02 · Approved AI tools</a>
@@ -34,17 +44,25 @@
           <li><a href="#section-02-free" class="doc-nav__link doc-nav__sublink">Free &amp; low-cost stack</a></li>
         </ul>
       </li>
-      <li><a href="#section-03" class="doc-nav__link">03 · Household AI rules</a></li>
+      <li><a href="#section-03" class="doc-nav__link">03 · Household AI &amp; device rules</a></li>
       <li><a href="#section-04" class="doc-nav__link">04 · Parental permission</a></li>
       <li><a href="#section-05" class="doc-nav__link">05 · Data retention &amp; privacy</a></li>
       <li><a href="#section-06" class="doc-nav__link">06 · Approval process</a></li>
-      <li><a href="#section-07" class="doc-nav__link">07 · Incident reporting</a></li>
+      <li>
+        <a href="#section-07" class="doc-nav__link">07 · Incident reporting</a>
+        <ul class="doc-nav__sub">
+          <li><a href="#section-07-factcheck" class="doc-nav__link doc-nav__sublink">Fact-check &amp; fraud (India)</a></li>
+          <li><a href="scams-and-misinformation.html" class="doc-nav__link doc-nav__sublink">Full guide (separate page)</a></li>
+        </ul>
+      </li>
       <li><a href="#section-08" class="doc-nav__link">08 · Sample scenarios</a></li>
       <li>
         <a href="#section-09" class="doc-nav__link">09 · Mobile &amp; gaming devices</a>
         <ul class="doc-nav__sub">
           <li><a href="#section-09-devices" class="doc-nav__link doc-nav__sublink">Device ownership</a></li>
           <li><a href="#section-09-screen-time" class="doc-nav__link doc-nav__sublink">Screen time limits</a></li>
+          <li><a href="#section-09-timetrack" class="doc-nav__link doc-nav__sublink">Time track &amp; kid reminders</a></li>
+          <li><a href="screen-time-tracker.html" class="doc-nav__link doc-nav__sublink">Screen time log (browser)</a></li>
           <li><a href="#section-09-mobile" class="doc-nav__link doc-nav__sublink">Mobile phone rules</a></li>
           <li><a href="#section-09-gaming" class="doc-nav__link doc-nav__sublink">Gaming device rules</a></li>
           <li><a href="#section-09-device-scenarios" class="doc-nav__link doc-nav__sublink">Device &amp; gaming scenarios</a></li>
@@ -65,24 +83,41 @@
   </div>
 </nav>
 
-<button type="button" class="doc-nav__reopen" id="doc-nav-reopen" hidden aria-controls="doc-nav" title="Open table of contents">
+<button type="button" class="doc-nav__reopen" id="doc-nav-reopen" hidden aria-controls="doc-nav" title="Open table of contents" tabindex="-1" aria-hidden="true">
   <i class="fa-solid fa-list-ul" aria-hidden="true"></i>
   <span class="visually-hidden">Open navigation</span>
 </button>
 
 <!-- COVER -->
-<header class="cover" id="cover" role="banner">
+<header class="cover" id="cover" role="region" aria-label="Policy introduction">
+  <div class="cover__media" aria-hidden="true">
+    <img
+      class="cover__img"
+      src="https://images.unsplash.com/photo-1567122087721-47b09b61e1d1?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1920&amp;q=82"
+      srcset="https://images.unsplash.com/photo-1567122087721-47b09b61e1d1?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=960&amp;q=82 960w,
+              https://images.unsplash.com/photo-1567122087721-47b09b61e1d1?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1920&amp;q=82 1920w"
+      sizes="100vw"
+      width="1920"
+      height="1280"
+      alt=""
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+    />
+  </div>
+  <div class="cover__overlay" aria-hidden="true"></div>
+  <div class="cover-inner">
   <div class="cover-top">
     <div class="family-badge">
       <div class="badge-icon"><i class="fa-solid fa-house"></i></div>
       <div class="badge-text">Indian Household · All Age Groups</div>
     </div>
-    <div class="version-tag">Version 1.3 · 2026</div>
+    <div class="version-tag">Version 1.8 · 2026</div>
   </div>
   <div class="cover-title">
     <div class="eyebrow">Official Household Document</div>
-    <h1>Family <span>AI Usage</span><br>Policy</h1>
-    <div class="subtitle">Age-appropriate rules, permissions, and guidelines for responsible AI use — for nuclear, joint, and single-guardian homes across India. Where this policy says &ldquo;parents,&rdquo; it means any parent or legal guardian responsible for the child.</div>
+    <h1>Family <span>AI &amp; Device</span><br>Policy</h1>
+    <div class="subtitle">Age-appropriate rules, permissions, and guidelines for responsible AI use and household devices (phones, tablets, consoles, smart TVs) — for nuclear, joint, and single-guardian homes across India. Where this policy says &ldquo;parents,&rdquo; it means any parent or legal guardian responsible for the child.</div>
   </div>
   <div class="cover-meta">
     <div class="meta-item"><div class="label">Member Tiers</div><div class="value">5 Groups</div></div>
@@ -90,6 +125,18 @@
     <div class="meta-item"><div class="label">Parents (18+)</div><div class="value">Full Admin</div></div>
     <div class="meta-item"><div class="label">Teens (13–17)</div><div class="value">Supervised</div></div>
     <div class="meta-item"><div class="label">Kids (0–12)</div><div class="value">Restricted</div></div>
+  </div>
+  <div class="cover__photo-credit" role="note">
+    <p class="cover__photo-credit__line">
+      <span class="cover__photo-credit__title">Hero</span>
+      <a href="https://unsplash.com/photos/GmDVGjqeVEk?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&amp;utm_campaign=asset_call_to_action" target="_blank" rel="noopener noreferrer">Indian family together</a>
+    </p>
+    <p class="cover__photo-credit__line">
+      Photo by <a href="https://unsplash.com/@suicide_chewbacca?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&amp;utm_campaign=asset_call_to_action" target="_blank" rel="noopener noreferrer">Ashwini Chaudhary</a>
+      on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&amp;utm_campaign=asset_call_to_action" target="_blank" rel="noopener noreferrer">Unsplash</a>
+      · <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer">Unsplash License</a>
+    </p>
+  </div>
   </div>
 </header>
 
@@ -136,7 +183,7 @@
       <div class="member-card adult">
         <div class="member-role"><i class="fa-solid fa-user-shield fa-icon-sm"></i> Policy Admin — Full Access</div>
         <div class="member-name">Parent / Guardian (18+)</div>
-        <div class="member-desc">Any adult with parental responsibility — mother, father, or legal guardian (including in single-parent households). Sets the rules, approves access, reviews children's activity, and manages all AI accounts and subscriptions. In joint families, grandparents or other elders may supervise use as agreed with the primary guardians, but account and policy decisions stay with the parent(s) or guardian.</div>
+        <div class="member-desc">Any adult with parental responsibility — mother, father, or legal guardian (including in single-parent households). Sets the rules, approves access, reviews children's activity, and manages AI accounts, subscriptions, and household device rules. In joint families, grandparents or other elders may supervise use as agreed with the primary guardians, but account and policy decisions stay with the parent(s) or guardian.</div>
         <div class="member-perms">
           <span class="perm-tag green">✓ All Tools</span>
           <span class="perm-tag green">✓ Grant Access</span>
@@ -293,7 +340,8 @@
         <tr><td>Study help</td><td>Khan Academy (core), Google Socratic</td><td>Khanmigo or similar may be paid in some regions — core Khan content stays free.</td></tr>
         <tr><td>Passwords</td><td>Bitwarden (free personal), KeePass + your own sync</td><td>Never store passwords in WhatsApp or notes. Family paid plans are low-cost if you upgrade later.</td></tr>
         <tr><td>Parental controls</td><td>Google Family Link (Android); Screen Time + Family Sharing (iPhone)</td><td>Built-in; use before paying for third-party parental apps.</td></tr>
-        <tr><td>Family AI log &amp; policy</td><td>Google Sheets, Google Docs, Notion (free tier)</td><td>One shared &ldquo;Family AI Log&rdquo; is enough to start.</td></tr>
+        <tr><td>Time limits &amp; bedtime</td><td>Digital Wellbeing (Android), Screen Time Downtime (iOS), console parental apps</td><td>Set schedules on the device — not only rules on paper. Sample kid-friendly phrases: <a href="#section-09-timetrack">Section 09 · time track &amp; reminders</a>. Optional <a href="screen-time-tracker.html">minute log</a> (local browser).</td></tr>
+        <tr><td>Family AI &amp; device log &amp; policy</td><td>Google Sheets, Google Docs, Notion (free tier)</td><td>One shared &ldquo;Family AI &amp; Device Log&rdquo; is enough to start.</td></tr>
         <tr><td>Translation &amp; Indian languages</td><td>Google Translate, Bhashini</td><td>Free; still verify important facts.</td></tr>
         <tr><td>Home Wi-Fi safety (optional)</td><td>NextDNS (free tier), router blocklists</td><td>Helps all devices on the network; free tier has usage caps.</td></tr>
       </tbody>
@@ -313,7 +361,7 @@
   <div class="section" id="section-03">
     <div class="section-header">
       <span class="section-num">Section 03</span>
-      <h2 class="section-title">Household AI Rules</h2>
+      <h2 class="section-title">Household AI &amp; Device Rules</h2>
       <span class="section-icon"><i class="fa-solid fa-clipboard-list icon-navy"></i></span>
     </div>
     <div class="rules-list">
@@ -465,7 +513,7 @@
       <div class="flow-step"><div class="step-num">1</div><div class="step-title">Request</div><div class="step-desc">Child asks a parent verbally — states the tool, purpose, and how long they'll use it.</div></div>
       <div class="flow-step"><div class="step-num">2</div><div class="step-title">Review</div><div class="step-desc">Parent checks: is the tool approved? What data is involved? Is it age-appropriate?</div></div>
       <div class="flow-step"><div class="step-num">3</div><div class="step-title">Decide</div><div class="step-desc">Yes / No / Yes with conditions. Decision given the same day — no delays.</div></div>
-      <div class="flow-step"><div class="step-num">4</div><div class="step-title">Log It</div><div class="step-desc">Parent notes approval in the Family AI Log (shared Google Sheet or diary).</div></div>
+      <div class="flow-step"><div class="step-num">4</div><div class="step-title">Log It</div><div class="step-desc">Parent notes approval in the Family AI &amp; Device Log (shared Google Sheet or diary).</div></div>
       <div class="flow-step"><div class="step-num">5</div><div class="step-title">Check-In</div><div class="step-desc">Monthly family review: how did it go? Update rules if needed.</div></div>
     </div>
     <div class="sample-request">
@@ -496,7 +544,7 @@
         <ul class="inc-steps">
           <li><div class="inc-step-num">1</div><span>Mention to a parent casually (e.g. at dinner)</span></li>
           <li><div class="inc-step-num">2</div><span>Parent notes the tool and what happened</span></li>
-          <li><div class="inc-step-num">3</div><span>Log entry in the Family AI Log</span></li>
+          <li><div class="inc-step-num">3</div><span>Log entry in the Family AI &amp; Device Log</span></li>
           <li><div class="inc-step-num">4</div><span>Discuss at next monthly family check-in</span></li>
         </ul>
       </div>
@@ -538,6 +586,64 @@
           <li><div class="inc-step-num">6</div><span>Full family discussion + mandatory policy update</span></li>
         </ul>
       </div>
+    </div>
+
+    <h3 class="subsection-title subsection-title--spaced" id="section-07-factcheck"><i class="fa-solid fa-shield-halved subsection-title__icon icon-teal" aria-hidden="true"></i> Fact-checking &amp; fraud awareness (India)</h3>
+    <p class="section-intro section-intro--compact">Scammers use SMS, WhatsApp, fake calls, and even AI-written messages that sound official. No tool can block every fraud — <strong>habits matter more than apps</strong>. Before money moves or an OTP is typed, slow down and verify.</p>
+
+    <div class="callout info callout--mt-16">
+      <div class="callout-icon"><i class="fa-solid fa-book-open icon-info"></i></div>
+      <div class="callout-text"><strong>More detail (separate page)</strong> For misinformation, deeper scam patterns, verification habits, and family discussion ideas, see the companion guide <a href="scams-and-misinformation.html">Scams &amp; misinformation</a>.</div>
+    </div>
+
+    <div class="callout info callout--mt-16">
+      <div class="callout-icon"><i class="fa-solid fa-magnifying-glass icon-info"></i></div>
+      <div class="callout-text"><strong>Fact-check before you trust</strong>AI chatbots can be wrong or outdated; they can also polish scam scripts. Treat any AI answer about law, tax, health, or money as a <strong>draft</strong> — confirm with official sources (government portals, your bank&rsquo;s app, a qualified professional). For government-related claims, check the <a href="https://www.pib.gov.in/factcheckupdates.aspx" target="_blank" rel="noopener noreferrer">Press Information Bureau fact-check updates</a> when relevant.</div>
+    </div>
+
+    <p class="section-intro section-intro--compact"><strong>Household fact-check steps</strong> (adults model this; teens and grandparents repeat aloud):</p>
+    <div class="approval-flow">
+      <div class="flow-step"><div class="step-num">1</div><div class="step-title">Pause</div><div class="step-desc">If someone rushes you (UPI, OTP, install this app), stop. Real banks and government offices do not demand instant action over random calls or WhatsApp.</div></div>
+      <div class="flow-step"><div class="step-num">2</div><div class="step-title">Verify the channel</div><div class="step-desc">Open the <strong>official app or website you already use</strong> (typed URL or bookmark). Do not tap links in SMS or email to &ldquo;fix&rdquo; your account.</div></div>
+      <div class="flow-step"><div class="step-num">3</div><div class="step-title">Cross-check</div><div class="step-desc">Search the offer or message text plus <strong>scam</strong> or <strong>fraud</strong> in a new tab. Read one or two trusted news or regulator pages before you pay.</div></div>
+      <div class="flow-step"><div class="step-num">4</div><div class="step-title">Ask offline</div><div class="step-desc">Call the bank&rsquo;s printed helpline (card back / passbook), visit a branch, or ask a family member in the room — especially for large amounts or seniors.</div></div>
+      <div class="flow-step"><div class="step-num">5</div><div class="step-title">Report if unsure</div><div class="step-desc">Save screenshots, note phone numbers, and use <a href="https://www.cybercrime.gov.in/" target="_blank" rel="noopener noreferrer">cybercrime.gov.in</a> or dial <strong>1930</strong> (National Cybercrime Helpline) when money or data is at risk.</div></div>
+    </div>
+
+    <p class="section-intro section-intro--compact"><strong>Tools &amp; habits that reduce fraud</strong> (use together; none are a guarantee):</p>
+    <table class="retention-table retention-table--mb">
+      <thead><tr><th>Area</th><th>What helps</th><th>Household note</th></tr></thead>
+      <tbody>
+        <tr><td>Device &amp; browser</td><td>Automatic OS updates; Safe Browsing in Chrome/Edge; avoid sideloading APKs from chat links</td><td>Children and seniors: install apps only from Play Store / App Store with a family member.</td></tr>
+        <tr><td>UPI &amp; banking</td><td>Official bank or BHIM UPI apps; check payee name before entering PIN; turn on transaction SMS/email alerts</td><td><strong>Never</strong> share OTPs for &ldquo;refunds&rdquo; or &ldquo;unblocking&rdquo; — banks do not ask this way.</td></tr>
+        <tr><td>Passwords &amp; 2FA</td><td>Password manager (see Section 02); two-factor authentication on email and banking</td><td>One compromised password should not empty every account.</td></tr>
+        <tr><td>Caller ID</td><td>Spam identification apps (e.g. Truecaller) — treat as hints only</td><td>Numbers can be spoofed; <strong>callback via official numbers</strong>, not &ldquo;Call Back&rdquo; on same thread.</td></tr>
+        <tr><td>Home network</td><td>Router admin password changed; optional DNS filtering (e.g. NextDNS — Section 02)</td><td>Reduces malicious links on all devices at once.</td></tr>
+        <tr><td>Reporting</td><td><a href="https://www.cybercrime.gov.in/" target="_blank" rel="noopener noreferrer">cybercrime.gov.in</a>; helpline <strong>1930</strong></td><td>Report quickly after fraud — timing helps banks freeze flows.</td></tr>
+      </tbody>
+    </table>
+
+    <p class="section-intro section-intro--compact"><strong>Common fraud types in India</strong> (know the pattern — the details change):</p>
+    <table class="retention-table">
+      <thead><tr><th>Type</th><th>How it often appears</th></tr></thead>
+      <tbody>
+        <tr><td>UPI / QR / &ldquo;wrong transfer&rdquo;</td><td>Fake refund requests, tampered QR at shops, &ldquo;you received money by mistake — send it back&rdquo; to a <em>different</em> UPI ID</td></tr>
+        <tr><td>OTP / KYC / bank impersonation</td><td>Calls or SMS claiming account block, SIM closure, or mandatory KYC — asks for OTP, card number, or &ldquo;remote assistance&rdquo;</td></tr>
+        <tr><td>Fake loan / illegal lending apps</td><td>Quick loan via unknown APK; then harassment, fake legal threats, contact list abuse</td></tr>
+        <tr><td>Job / internship fee scams</td><td>Telegram / WhatsApp &ldquo;work from home&rdquo; with registration, security deposit, or training fee before any real work</td></tr>
+        <tr><td>Investment / crypto / &ldquo;double money&rdquo;</td><td>Guaranteed returns, celebrity deepfakes, pump groups — often starts small then escalates</td></tr>
+        <tr><td>Lottery / prize / customs</td><td>&ldquo;You won&rdquo; messages, parcel stuck — pay GST/customs to release; fake RBI / income tax letters</td></tr>
+        <tr><td>Utility disconnection scare</td><td>SMS: electricity / gas / broadband will be cut in one hour — pay via link</td></tr>
+        <tr><td>Marketplace / courier scams</td><td>Fake buyers on OLX / social; fake payment screenshots; &ldquo;merchant&rdquo; UPI to receive money (you pay instead)</td></tr>
+        <tr><td>Matrimonial / romance fraud</td><td>Long chats, then medical emergency, gift customs, or crypto &ldquo;investment&rdquo;</td></tr>
+        <tr><td>Aadhaar / PAN / ITR phishing</td><td>&ldquo;Link expired&rdquo; / &ldquo;refund pending&rdquo; — links to fake sites that steal credentials</td></tr>
+        <tr><td>SIM swap / fraudulent porting</td><td>Sudden loss of network; attackers receive your SMS OTPs — act with operator and bank immediately</td></tr>
+        <tr><td>Deepfake voice / video</td><td>&ldquo;Relative in trouble&rdquo; or &ldquo;boss urgent transfer&rdquo; — verify with a second channel (callback, family code word)</td></tr>
+      </tbody>
+    </table>
+    <div class="callout info callout--mt-16">
+      <div class="callout-icon"><i class="fa-solid fa-children icon-info"></i></div>
+      <div class="callout-text"><strong>For children &amp; teens</strong>If something online offers money, free skins, or &ldquo;secret&rdquo; adult content — it is almost always a trap. Tell a parent <strong>before</strong> clicking, paying, or sharing screen. Same steps as above apply; no shame in asking.</div>
     </div>
   </div>
 
@@ -594,7 +700,7 @@
       </div>
       <div class="scenario-body">
         <div class="scenario-detail"><div class="label">Situation</div><p>A 14-year-old uses a general AI chatbot to get route suggestions and types the full home address in the query. They notice the mistake immediately and feel too worried to say anything.</p></div>
-        <div class="scenario-detail"><div class="label">Policy Outcome</div><p>🔴 <strong>Medium incident — tell a parent the same day.</strong> Child must not hide it. Parent reviews the chat, decides what to delete, and monitors if needed. No punishment — child is praised for reporting promptly. Logged in the Family AI Log.</p></div>
+        <div class="scenario-detail"><div class="label">Policy Outcome</div><p>🔴 <strong>Medium incident — tell a parent the same day.</strong> Child must not hide it. Parent reviews the chat, decides what to delete, and monitors if needed. No punishment — child is praised for reporting promptly. Logged in the Family AI &amp; Device Log.</p></div>
       </div>
     </div>
 
@@ -690,6 +796,59 @@
         <div class="screen-time-card__value">30 min/day</div>
         <div class="screen-time-card__hint">Co-viewing with parent only; no solo device time</div>
       </div>
+    </div>
+
+    <h3 class="subsection-title subsection-title--spaced subsection-title--tight" id="section-09-timetrack"><i class="fa-solid fa-stopwatch subsection-title__icon icon-teal" aria-hidden="true"></i> Time-tracking tools &amp; friendly &ldquo;drop the device&rdquo; reminders</h3>
+    <p class="section-intro section-intro--compact">Use <strong>built-in timers and schedules</strong> so limits are not only nagging from parents — the device itself backs the family rules. Pair them with <strong>short, kind phrases</strong> (spoken aloud, sticker on the charger, or lock-screen wallpaper) so kids and teens hear encouragement, not punishment.</p>
+    <p class="section-intro section-intro--compact"><strong>Optional household log:</strong> Record approximate minutes per day per person in the <a href="screen-time-tracker.html">browser screen time log</a> (saved only on that device via localStorage — export JSON occasionally for backup).</p>
+
+    <table class="retention-table retention-table--mb">
+      <thead><tr><th>Platform</th><th>Built-in time tools (start here)</th><th>What to set</th></tr></thead>
+      <tbody>
+        <tr><td>iPhone / iPad</td><td>Settings → Screen Time → Downtime, App Limits, Always Allowed, Communication Limits</td><td><strong>Downtime</strong> for school nights and bedtime; <strong>app limits</strong> for games &amp; social; keep school apps &amp; phone in Always Allowed if needed.</td></tr>
+        <tr><td>Android</td><td>Settings → Digital Wellbeing &amp; parental controls (or <strong>Wellbeing</strong> on Pixel)</td><td><strong>App timers</strong>, <strong>Bedtime mode</strong> / Wind Down (greyscale + Do Not Disturb); per-day caps for games &amp; YouTube.</td></tr>
+        <tr><td>Child Android + parent phone</td><td><a href="https://families.google.com/familylink/" target="_blank" rel="noopener noreferrer">Google Family Link</a></td><td>Daily limit, bedtime, &ldquo;lock device&rdquo; for study; approve new apps. Works with the child&rsquo;s Google account on the device.</td></tr>
+        <tr><td>Windows (PC / laptop)</td><td>Microsoft Family Safety (child account + parent dashboard)</td><td>Screen time per device and per app; block after hours.</td></tr>
+        <tr><td>Nintendo Switch</td><td>Parental Controls app (phone) + console settings</td><td><strong>Play-time limit</strong> + alarm; suspend software at limit — good for predictable endings.</td></tr>
+        <tr><td>PlayStation / Xbox</td><td>Console parental controls + mobile apps (PS / Xbox Family)</td><td>Play time windows, content rating caps; turn off auto-renew for kids&rsquo; purchases.</td></tr>
+        <tr><td>Optional extras</td><td>Focus / Pomodoro apps (e.g. Forest, minimal games)</td><td>Use for <strong>study sessions</strong>, not as a substitute for OS-level bedtime locks. Paid apps are optional.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout info callout--mt-16">
+      <div class="callout-icon"><i class="fa-solid fa-heart icon-info"></i></div>
+      <div class="callout-text"><strong>Why &ldquo;cute&rdquo; helps</strong>Harsh lock screens can feel like a fight. A warm line (&ldquo;You&rsquo;re doing great — screens rest now&rdquo;) plus a clear routine (same charging spot, same good-night line) makes it easier for children to <strong>co-operate without shame</strong>. Teens may prefer shorter, neutral text — agree wording together.</div>
+    </div>
+
+    <p class="section-intro section-intro--compact"><strong>Sample phrases for warnings &amp; cut-offs</strong> — say them aloud, put one on a card by the charging station, or use as wallpaper text. Adapt names and language for your home.</p>
+    <div class="cute-reminder-board" role="region" aria-label="Sample kid-friendly time messages">
+      <div class="cute-reminder-grid">
+        <div class="cute-msg-card cute-msg-card--soft">
+          <span class="cute-msg-card__tag">5-minute heads-up</span>
+          <p class="cute-msg-card__text">&ldquo;Five minutes left — finish this level / message, then we plug in together.&rdquo;</p>
+        </div>
+        <div class="cute-msg-card cute-msg-card--soft">
+          <span class="cute-msg-card__tag">1-minute nudge</span>
+          <p class="cute-msg-card__text">&ldquo;Last lap! Land the plane gently — pause, save, breathe.&rdquo;</p>
+        </div>
+        <div class="cute-msg-card cute-msg-card--warn">
+          <span class="cute-msg-card__tag">Time&rsquo;s up (firm but kind)</span>
+          <p class="cute-msg-card__text">&ldquo;This screen is on a break now — thank you for stopping. I&rsquo;ll be right here.&rdquo;</p>
+        </div>
+        <div class="cute-msg-card cute-msg-card--soft">
+          <span class="cute-msg-card__tag">Bedtime</span>
+          <p class="cute-msg-card__text">&ldquo;Moon time — screens sleep so we can sleep. You did well today.&rdquo;</p>
+        </div>
+        <div class="cute-msg-card cute-msg-card--soft">
+          <span class="cute-msg-card__tag">Study first</span>
+          <p class="cute-msg-card__text">&ldquo;Homework heroes first — then play time opens like a treasure box.&rdquo;</p>
+        </div>
+        <div class="cute-msg-card cute-msg-card--soft">
+          <span class="cute-msg-card__tag">Meals &amp; family</span>
+          <p class="cute-msg-card__text">&ldquo;Dinner magic — phones nap in the basket. Stories stay at the table.&rdquo;</p>
+        </div>
+      </div>
+      <p class="cute-reminder-board__hint"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i> <strong>Tip:</strong> On iPhone, set a <strong>Focus</strong> (e.g. Sleep) or Downtime so the lock screen matches bedtime hours. On Android, <strong>Bedtime mode</strong> can dim and silence — add your phrase as a lock-screen sticker or family note. Rename the device to something friendly (e.g. &ldquo;Anaya&rsquo;s iPad — bedtime 9pm&rdquo;) so even system prompts feel like a family agreement.</p>
     </div>
 
     <!-- MOBILE RULES -->
@@ -1078,11 +1237,12 @@
 <!-- FOOTER -->
 <footer class="policy-footer" id="policy-footer" role="contentinfo">
 
+  <div class="policy-footer__main-row">
   <!-- Left: policy info -->
   <div class="policy-footer__col">
-    <div class="policy-footer__brand-title">Family AI Usage Policy</div>
+    <div class="policy-footer__brand-title">Family AI &amp; Device Policy</div>
     <div class="policy-footer__brand-meta">
-      Version 1.3 &nbsp;·&nbsp; 2026<br>
+      Version 1.8 &nbsp;·&nbsp; 2026<br>
       Applicable to all household members<br>
       Review annually or after any major incident
     </div>
@@ -1098,7 +1258,7 @@
     <div class="policy-footer__seal-ring">
       <i class="fa-solid fa-house" aria-hidden="true"></i>
     </div>
-    <div class="policy-footer__seal-label">Household Policy</div>
+    <div class="policy-footer__seal-label">AI &amp; Device Policy</div>
     <div class="policy-footer__seal-sub">Indian Household · 2026</div>
   </div>
 
@@ -1112,6 +1272,17 @@
       <i class="fa-solid fa-globe" aria-hidden="true"></i> Cyber fraud → cybercrime.gov.in
     </div>
     <div class="policy-footer__review-date">Next review: April 2026</div>
+  </div>
+  </div>
+
+  <div class="policy-footer__attribution" role="note">
+    <p class="policy-footer__attribution-text">
+      <strong>Photography</strong>
+      Hero image: <a href="https://unsplash.com/photos/GmDVGjqeVEk?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&amp;utm_campaign=asset_call_to_action" target="_blank" rel="noopener noreferrer">Smiling women (Indian family, Meerut, India)</a>
+      — Photo by <a href="https://unsplash.com/@suicide_chewbacca?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&amp;utm_campaign=asset_call_to_action" target="_blank" rel="noopener noreferrer">Ashwini Chaudhary</a>
+      on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&amp;utm_campaign=asset_call_to_action" target="_blank" rel="noopener noreferrer">Unsplash</a>.
+      Free to use under the <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer">Unsplash License</a>.
+    </p>
   </div>
 
 </footer>
